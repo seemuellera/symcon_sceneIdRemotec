@@ -131,6 +131,15 @@ class SceneIdRemotec extends IPSModule {
 		return $variableIds;
 	}
 	
+	protected function GetSceneNumber(int $variableId) {
+		
+		$variableIds = $this->GetTargetVariableIds();
+		
+		$sceneNumber = array_search($variableId, $variableIds);
+		
+		return $sceneNumber;
+	}
+	
 	protected function LogMessage($message, $severity = 'INFO') {
 		
 		if ( ($severity == 'DEBUG') && ($this->ReadPropertyBoolean('DebugOutput') == false )) {
