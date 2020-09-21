@@ -488,11 +488,32 @@ class SceneIdRemotec extends IPSModule {
 		}
 		
 		$sceneId = $Data[0];
-		
 		$sceneNumber = $this->GetSceneNumber($SenderId);
+		
+		$this->LogMessage("Scene configuration " . print_r($this->GetSceneConfiguration($sceneNumber)), "DEBUG");
 		
 		SetValue($this->GetIDForIdent("LastTrigger"), time());
 		SetValue($this->GetIDForIdent("LastAction"), "Button " . $sceneNumber . ": " . $this->SceneNames[$sceneId]);
+	}
+	
+	protected function GetSceneConfiguration($sceneNumber) {
+		
+		$sceneConfigurationJson = $this->ReadPropertyString("SceneConfiguration");
+		$sceneConfiguration = json_decode($sceneConfigurationJson, true);
+		
+		if (! is_array($sceneConfiguration)) {
+			
+			$this->LogMessage("Scene Configuration is faulty","ERROR");
+			return false;
+		}
+		
+		if (count($sceneConfiguration) != 8) {
+			
+			$this->LogMessage("Scene Configuration is faulty. Incorrect Number of scenes.","ERROR");
+			return false;
+		}
+		
+		return $sceneConfiguration[$sceneNumber];
 	}
 
 	protected function DeviceHandler($targetId, $action, $specificValue = false) {
