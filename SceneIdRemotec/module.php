@@ -61,7 +61,7 @@ class SceneIdRemotec extends IPSModule {
 		// Properties - Global
 		$this->RegisterPropertyString("Sender","SceneIdRemotec");
 		$this->RegisterPropertyInteger("RefreshInterval",0);
-		$this->RegisterPropertyInteger("SceneId",0);
+		$this->RegisterPropertyInteger("TargetInstance",0);
 		$this->RegisterPropertyBoolean("DebugOutput",false);
 		
 		// Variables
@@ -87,9 +87,6 @@ class SceneIdRemotec extends IPSModule {
 		$newInterval = $this->ReadPropertyInteger("RefreshInterval") * 1000;
 		$this->SetTimerInterval("RefreshInformation", $newInterval);
 		
-		// Also register the target variable to keep track of change events
-		$this->RegisterMessage($this->ReadPropertyInteger("SceneId"), VM_UPDATE);
-		
 		// Diese Zeile nicht löschen
 		parent::ApplyChanges();
 	}
@@ -106,7 +103,7 @@ class SceneIdRemotec extends IPSModule {
 		// Add the Elements
 		$form['elements'][] = Array("type" => "NumberSpinner", "name" => "RefreshInterval", "caption" => "Refresh Interval");
 		$form['elements'][] = Array("type" => "CheckBox", "name" => "DebugOutput", "caption" => "Enable Debug Output");
-		$form['elements'][] = Array("type" => "SelectVariable", "name" => "SceneId", "caption" => "Scene ID of source device");
+		$form['elements'][] = Array("type" => "SelectInstance", "name" => "TargetInstance", "caption" => "Remotec Instance");
 		
 		// Add the buttons for the test center
 		$form['actions'][] = Array(	"type" => "Button", "label" => "Refresh", "onClick" => 'SCENEIDREMOTEC_RefreshInformation($id);');
