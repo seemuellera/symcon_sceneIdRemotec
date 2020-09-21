@@ -24,8 +24,7 @@ class SceneIdRemotec extends IPSModule {
 			"5" => "CentralScene5",
 			"6" => "CentralScene6",
 			"7" => "CentralScene7",
-			"8" => "CentralScene8",
-			"15" => "CentralScene15"
+			"8" => "CentralScene8"
 		);
 		
 		$this->SceneActions = Array(
@@ -86,6 +85,13 @@ class SceneIdRemotec extends IPSModule {
 
 		$newInterval = $this->ReadPropertyInteger("RefreshInterval") * 1000;
 		$this->SetTimerInterval("RefreshInformation", $newInterval);
+		
+		$allTargetVariableIds = $this->GetTargetVariableIds();
+		
+		foreach($allTargetVariableIds as $currentVariable) {
+			
+			$this->RegisterMessage($currentVariable, VM_UPDATE);
+		}
 		
 		// Diese Zeile nicht löschen
 		parent::ApplyChanges();
