@@ -119,7 +119,7 @@ class SceneIdRemotec extends IPSModule {
 		
 		foreach ($this->SceneIdents as $button => $ident) {
 			
-			$variableIds[$button] = IPS_GetObjectIDByIdent($ident, $this->InstanceID);
+			$variableIds[$button] = IPS_GetObjectIDByIdent($ident, $this->ReadPropertyInteger("TargetInstance"));
 		}
 		
 		return $variableIds;
