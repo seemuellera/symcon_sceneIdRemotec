@@ -513,7 +513,15 @@ class SceneIdRemotec extends IPSModule {
 			return false;
 		}
 		
-		return $sceneConfiguration[$sceneNumber];
+		foreach ($sceneConfiguration as $currentScene) {
+			
+			if ($currentScene['Button'] == $sceneNumber) {
+				
+				return $currentScene;
+			}
+		}
+		
+		return false;
 	}
 
 	protected function DeviceHandler($targetId, $action, $specificValue = false) {
