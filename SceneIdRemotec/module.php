@@ -152,14 +152,16 @@ class SceneIdRemotec extends IPSModule {
 										"name" => "SingleClickActionVariable",
 										"width" => "auto",
 										"edit" => Array("type" => "SelectVariable"),
-										"add" => 0
+										"add" => 0,
+										"visible" => false
 									),
 									Array(
 										"caption" => "Single Click Action Parameter",
 										"name" => "SingleClickActionParameter",
 										"width" => "auto",
 										"edit" => Array("type" => "NumberSpinner"),
-										"add" => 0
+										"add" => 0,
+										"visible" => false
 									),
 									Array(
 										"caption" => "Double Click Enabled",
@@ -183,14 +185,16 @@ class SceneIdRemotec extends IPSModule {
 										"name" => "DoubleClickActionVariable",
 										"width" => "auto",
 										"edit" => Array("type" => "SelectVariable"),
-										"add" => 0
+										"add" => 0,
+										"visible" => false
 									),
 									Array(
 										"caption" => "Double Click Action Parameter",
 										"name" => "DoubleClickActionParameter",
 										"width" => "auto",
 										"edit" => Array("type" => "NumberSpinner"),
-										"add" => 0
+										"add" => 0,
+										"visible" => false
 									),
 									Array(
 										"caption" => "Hold Enabled",
@@ -214,14 +218,16 @@ class SceneIdRemotec extends IPSModule {
 										"name" => "HoldActionVariable",
 										"width" => "auto",
 										"edit" => Array("type" => "SelectVariable"),
-										"add" => 0
+										"add" => 0,
+										"visible" => false
 									),
 									Array(
 										"caption" => "Hold Action Parameter",
 										"name" => "HoldActionParameter",
 										"width" => "auto",
 										"edit" => Array("type" => "NumberSpinner"),
-										"add" => 0
+										"add" => 0,
+										"visible" => false
 									),
 									Array(
 										"caption" => "Release Enabled",
@@ -245,14 +251,16 @@ class SceneIdRemotec extends IPSModule {
 										"name" => "ReleaseActionVariable",
 										"width" => "auto",
 										"edit" => Array("type" => "SelectVariable"),
-										"add" => 0
+										"add" => 0,
+										"visible" => false
 									),
 									Array(
 										"caption" => "Release Action Parameter",
 										"name" => "ReleaseActionParameter",
 										"width" => "auto",
 										"edit" => Array("type" => "NumberSpinner"),
-										"add" => 0
+										"add" => 0,
+										"visible" => false
 									)
 								),
 								"values" => Array(
