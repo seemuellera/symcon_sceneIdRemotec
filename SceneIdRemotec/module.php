@@ -355,73 +355,10 @@ class SceneIdRemotec extends IPSModule {
 		
 		$sceneId = $Data[0];
 		
-		/**
-		
-		// Exit the function if the scene ID is disabled
-		switch ($sceneId) {
-		
-			case "16":
-				if(! $this->ReadPropertyBoolean("SceneS1SingleClickEnabled") ) {
-					return;
-				}
-				$this->DeviceHandler($this->ReadPropertyInteger("SceneS1SingleClickTarget"), $this->ReadPropertyString("SceneS1SingleClickAction"), $this->ReadPropertyInteger("SceneS1SingleClickDimValue"));
-				break;
-			case "14":
-				if(! $this->ReadPropertyBoolean("SceneS1DoubleClickEnabled") ) {
-					return;
-				}
-				$this->DeviceHandler($this->ReadPropertyInteger("SceneS1DoubleClickTarget"), $this->ReadPropertyString("SceneS1DoubleClickAction"), $this->ReadPropertyInteger("SceneS1DoubleClickDimValue"));
-				break;
-			case "12":
-				if(! $this->ReadPropertyBoolean("SceneS1HoldEnabled") ) {
-					return;
-				}
-				$this->DeviceHandler($this->ReadPropertyInteger("SceneS1HoldTarget"), $this->ReadPropertyString("SceneS1HoldAction"), $this->ReadPropertyInteger("SceneS1HoldDimValue"));
-				break;
-			case "13":
-				if(! $this->ReadPropertyBoolean("SceneS1HoldEnabled") ) {
-					return;
-				}
-				$this->DeviceHandler($this->ReadPropertyInteger("SceneS1ReleaseTarget"), $this->ReadPropertyString("SceneS1ReleaseAction"), $this->ReadPropertyInteger("SceneS1ReleaseDimValue"));
-				break;
-			case "26":
-				if(! $this->ReadPropertyBoolean("SceneS2SingleClickEnabled") ) {
-					return;
-				}
-				$this->DeviceHandler($this->ReadPropertyInteger("SceneS2SingleClickTarget"), $this->ReadPropertyString("SceneS2SingleClickAction"), $this->ReadPropertyInteger("SceneS2SingleClickDimValue"));
-				break;
-			case "24":
-				if(! $this->ReadPropertyBoolean("SceneS2DoubleClickEnabled") ) {
-					return;
-				}
-				$this->DeviceHandler($this->ReadPropertyInteger("SceneS2DoubleClickTarget"), $this->ReadPropertyString("SceneS2DoubleClickAction"), $this->ReadPropertyInteger("SceneS2DoubleClickDimValue"));
-				break;
-			case "25":
-				if(! $this->ReadPropertyBoolean("SceneS2TrippleClickEnabled") ) {
-					return;
-				}
-				$this->DeviceHandler($this->ReadPropertyInteger("SceneS2TrippleClickTarget"), $this->ReadPropertyString("SceneS2TrippleClickAction"), $this->ReadPropertyInteger("SceneS2TrippleClickDimValue"));
-				break;
-			case "22":
-				if(! $this->ReadPropertyBoolean("SceneS2HoldEnabled") ) {
-					return;
-				}
-				$this->DeviceHandler($this->ReadPropertyInteger("SceneS2HoldTarget"), $this->ReadPropertyString("SceneS2HoldAction"), $this->ReadPropertyInteger("SceneS2HoldDimValue"));
-				break;
-			case "23":
-				if(! $this->ReadPropertyBoolean("SceneS2HoldEnabled") ) {
-					return;
-				}
-				$this->DeviceHandler($this->ReadPropertyInteger("SceneS2ReleaseTarget"), $this->ReadPropertyString("SceneS2ReleaseAction"), $this->ReadPropertyInteger("SceneS2ReleaseDimValue"));
-				break;
-			default:
-				throw new Exception("Invalid Scene ID" . $sceneId);
-		}
-		
-		**/
+		$sceneNumber = $this->GetSceneNumber($SenderId);
 		
 		SetValue($this->GetIDForIdent("LastTrigger"), time());
-		SetValue($this->GetIDForIdent("LastAction"), $this->SceneNames[$sceneId]);
+		SetValue($this->GetIDForIdent("LastAction"), "Button " . $sceneNumber . ": " . $this->SceneNames[$sceneId]);
 	}
 
 	protected function DeviceHandler($targetId, $action, $specificValue = false) {
