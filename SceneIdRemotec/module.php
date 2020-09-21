@@ -490,7 +490,20 @@ class SceneIdRemotec extends IPSModule {
 		$sceneId = $Data[0];
 		$sceneNumber = $this->GetSceneNumber($SenderId);
 		
-		$this->LogMessage("Scene configuration " . print_r($this->GetSceneConfiguration($sceneNumber)), "DEBUG");
+		$sceneConfiguration = $this->GetSceneConfiguration($sceneNumber);
+		
+		switch ($sceneId) {
+			
+			case "0":
+				if ($sceneConfiguration['SingleClickEnabled']) {
+					
+					$this->DeviceHandler($sceneConfiguration['SingleClickActionVariable'], $sceneConfiguration['SingleClickAction']);
+				}
+				break;
+			default:
+				$this->LogMessage("Scene ID value is not defined","ERROR");
+				break;
+		}
 		
 		SetValue($this->GetIDForIdent("LastTrigger"), time());
 		SetValue($this->GetIDForIdent("LastAction"), "Button " . $sceneNumber . ": " . $this->SceneNames[$sceneId]);
