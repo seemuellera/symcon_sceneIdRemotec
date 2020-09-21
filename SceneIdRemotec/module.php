@@ -497,7 +497,25 @@ class SceneIdRemotec extends IPSModule {
 			case "0":
 				if ($sceneConfiguration['SingleClickEnabled']) {
 					
-					$this->DeviceHandler($sceneConfiguration['SingleClickActionVariable'], $sceneConfiguration['SingleClickAction']);
+					$this->DeviceHandler($sceneConfiguration['SingleClickActionVariable'], $sceneConfiguration['SingleClickAction'], $sceneConfiguration['SingleClickActionParameter']);
+				}
+				break;
+			case "3":
+				if ($sceneConfiguration['DoubleClickEnabled']) {
+					
+					$this->DeviceHandler($sceneConfiguration['DoubleClickActionVariable'], $sceneConfiguration['DoubleClickAction'], $sceneConfiguration['DoubleClickActionParameter']);
+				}
+				break;
+			case "2":
+				if ($sceneConfiguration['HoldEnabled']) {
+					
+					$this->DeviceHandler($sceneConfiguration['HoldActionVariable'], $sceneConfiguration['HoldAction'], $sceneConfiguration['HoldActionParameter']);
+				}
+				break;
+			case "1":
+				if ($sceneConfiguration['ReleaseEnabled']) {
+					
+					$this->DeviceHandler($sceneConfiguration['ReleaseActionVariable'], $sceneConfiguration['ReleaseAction'], $sceneConfiguration['ReleaseActionParameter']);
 				}
 				break;
 			default:
