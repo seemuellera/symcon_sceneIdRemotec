@@ -11,9 +11,10 @@ class SceneIdRemotec extends IPSModule {
 
 		// Selbsterstellter Code
 		$this->SceneNames = Array(
-			"1" => "Single click",
-			"2" => "Double click",
-			"3" => "Tripple click"
+			"0" => "Single click",
+			"1" => "Release",
+			"2" => "Hold",
+			"3" => "Double click"
 		);
 		
 		$this->SceneIdents = Array(
