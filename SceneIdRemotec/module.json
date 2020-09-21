@@ -1,0 +1,14 @@
+{
+  "id": "{2F4E6101-78E7-4EB3-A07A-21BCE4E2131A}",
+  "name": "SceneIdRemotec",
+  "type": 3,
+  "vendor": "Andreas",
+  "aliases": 
+  [
+	  "SceneIdRemotec"
+  ],
+  "parentRequirements": [],
+  "childRequirements": [],
+  "implemented": [],
+  "prefix": "SCENEIDREMOTEC"
+}
