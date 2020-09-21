@@ -191,6 +191,68 @@ class SceneIdRemotec extends IPSModule {
 										"width" => "auto",
 										"edit" => Array("type" => "NumberSpinner"),
 										"add" => 0
+									),
+									Array(
+										"caption" => "Hold Enabled",
+										"name" => "HoldEnabled",
+										"width" => "100px",
+										"edit" => Array("type" => "CheckBox"),
+										"add" => false
+									),
+									Array(
+										"caption" => "Hold Action",
+										"name" => "HoldAction",
+										"width" => "250px",
+										"edit" => Array(
+													"type" => "Select",
+													"options" => $this->SceneActions
+												),
+										"add" => "Toggle"
+									),
+									Array(
+										"caption" => "Hold Action Variable",
+										"name" => "HoldActionVariable",
+										"width" => "auto",
+										"edit" => Array("type" => "SelectVariable"),
+										"add" => 0
+									),
+									Array(
+										"caption" => "Hold Action Parameter",
+										"name" => "HoldActionParameter",
+										"width" => "auto",
+										"edit" => Array("type" => "NumberSpinner"),
+										"add" => 0
+									),
+									Array(
+										"caption" => "Release Enabled",
+										"name" => "ReleaseEnabled",
+										"width" => "100px",
+										"edit" => Array("type" => "CheckBox"),
+										"add" => false
+									),
+									Array(
+										"caption" => "Release Action",
+										"name" => "ReleaseAction",
+										"width" => "250px",
+										"edit" => Array(
+													"type" => "Select",
+													"options" => $this->SceneActions
+												),
+										"add" => "Toggle"
+									),
+									Array(
+										"caption" => "Release Action Variable",
+										"name" => "ReleaseActionVariable",
+										"width" => "auto",
+										"edit" => Array("type" => "SelectVariable"),
+										"add" => 0
+									),
+									Array(
+										"caption" => "Release Action Parameter",
+										"name" => "ReleaseActionParameter",
+										"width" => "auto",
+										"edit" => Array("type" => "NumberSpinner"),
+										"add" => 0
 									)
 								),
 								"values" => Array(
@@ -203,7 +265,15 @@ class SceneIdRemotec extends IPSModule {
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
 										"DoubleClickActionVariable" => 0,
-										"DoubleClickActionParameter" => 0
+										"DoubleClickActionParameter" => 0,
+										"HoldEnabled" => false,
+										"HoldAction" => "Toggle",
+										"HoldActionVariable" => 0,
+										"HoldActionParameter" => 0,
+										"ReleaseEnabled" => false,
+										"ReleaseAction" => "Toggle",
+										"ReleaseActionVariable" => 0,
+										"ReleaseActionParameter" => 0
 									),
 									Array(
 										"Button" => "2",
@@ -214,7 +284,15 @@ class SceneIdRemotec extends IPSModule {
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
 										"DoubleClickActionVariable" => 0,
-										"DoubleClickActionParameter" => 0
+										"DoubleClickActionParameter" => 0,
+										"HoldEnabled" => false,
+										"HoldAction" => "Toggle",
+										"HoldActionVariable" => 0,
+										"HoldActionParameter" => 0,
+										"ReleaseEnabled" => false,
+										"ReleaseAction" => "Toggle",
+										"ReleaseActionVariable" => 0,
+										"ReleaseActionParameter" => 0
 									),
 									Array(
 										"Button" => "3",
@@ -225,7 +303,15 @@ class SceneIdRemotec extends IPSModule {
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
 										"DoubleClickActionVariable" => 0,
-										"DoubleClickActionParameter" => 0
+										"DoubleClickActionParameter" => 0,
+										"HoldEnabled" => false,
+										"HoldAction" => "Toggle",
+										"HoldActionVariable" => 0,
+										"HoldActionParameter" => 0,
+										"ReleaseEnabled" => false,
+										"ReleaseAction" => "Toggle",
+										"ReleaseActionVariable" => 0,
+										"ReleaseActionParameter" => 0
 									),
 									Array(
 										"Button" => "4",
@@ -236,7 +322,15 @@ class SceneIdRemotec extends IPSModule {
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
 										"DoubleClickActionVariable" => 0,
-										"DoubleClickActionParameter" => 0
+										"DoubleClickActionParameter" => 0,
+										"HoldEnabled" => false,
+										"HoldAction" => "Toggle",
+										"HoldActionVariable" => 0,
+										"HoldActionParameter" => 0,
+										"ReleaseEnabled" => false,
+										"ReleaseAction" => "Toggle",
+										"ReleaseActionVariable" => 0,
+										"ReleaseActionParameter" => 0
 									),
 									Array(
 										"Button" => "5",
@@ -247,7 +341,15 @@ class SceneIdRemotec extends IPSModule {
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
 										"DoubleClickActionVariable" => 0,
-										"DoubleClickActionParameter" => 0
+										"DoubleClickActionParameter" => 0,
+										"HoldEnabled" => false,
+										"HoldAction" => "Toggle",
+										"HoldActionVariable" => 0,
+										"HoldActionParameter" => 0,
+										"ReleaseEnabled" => false,
+										"ReleaseAction" => "Toggle",
+										"ReleaseActionVariable" => 0,
+										"ReleaseActionParameter" => 0
 									),
 									Array(
 										"Button" => "6",
@@ -258,7 +360,15 @@ class SceneIdRemotec extends IPSModule {
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
 										"DoubleClickActionVariable" => 0,
-										"DoubleClickActionParameter" => 0
+										"DoubleClickActionParameter" => 0,
+										"HoldEnabled" => false,
+										"HoldAction" => "Toggle",
+										"HoldActionVariable" => 0,
+										"HoldActionParameter" => 0,
+										"ReleaseEnabled" => false,
+										"ReleaseAction" => "Toggle",
+										"ReleaseActionVariable" => 0,
+										"ReleaseActionParameter" => 0
 									),
 									Array(
 										"Button" => "7",
@@ -269,7 +379,15 @@ class SceneIdRemotec extends IPSModule {
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
 										"DoubleClickActionVariable" => 0,
-										"DoubleClickActionParameter" => 0
+										"DoubleClickActionParameter" => 0,
+										"HoldEnabled" => false,
+										"HoldAction" => "Toggle",
+										"HoldActionVariable" => 0,
+										"HoldActionParameter" => 0,
+										"ReleaseEnabled" => false,
+										"ReleaseAction" => "Toggle",
+										"ReleaseActionVariable" => 0,
+										"ReleaseActionParameter" => 0
 									),
 									Array(
 										"Button" => "8",
@@ -280,7 +398,15 @@ class SceneIdRemotec extends IPSModule {
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
 										"DoubleClickActionVariable" => 0,
-										"DoubleClickActionParameter" => 0
+										"DoubleClickActionParameter" => 0,
+										"HoldEnabled" => false,
+										"HoldAction" => "Toggle",
+										"HoldActionVariable" => 0,
+										"HoldActionParameter" => 0,
+										"ReleaseEnabled" => false,
+										"ReleaseAction" => "Toggle",
+										"ReleaseActionVariable" => 0,
+										"ReleaseActionParameter" => 0
 									)
 								)
 							);
