@@ -62,6 +62,7 @@ class SceneIdRemotec extends IPSModule {
 		$this->RegisterPropertyInteger("RefreshInterval",0);
 		$this->RegisterPropertyInteger("TargetInstance",0);
 		$this->RegisterPropertyBoolean("DebugOutput",false);
+		$this->RegisterPropertyString("SceneConfiguration","");
 		
 		// Variables
 		$this->RegisterVariableInteger("LastTrigger","Last Trigger","~UnixTimestamp");
@@ -113,6 +114,97 @@ class SceneIdRemotec extends IPSModule {
 		
 		// Add the buttons for the test center
 		$form['actions'][] = Array(	"type" => "Button", "label" => "Refresh", "onClick" => 'SCENEIDREMOTEC_RefreshInformation($id);');
+		
+		$form['elements'][] = Array(
+								"type" => "List", 
+								"name" => "SceneConfiguration", 
+								"caption" => "Scene configuration",
+								"rowCount" => 8,
+								"add" => false,
+								"delete" => false,
+								"columns" => Array(
+									Array(
+										"caption" => "Button",
+										"name" => "Button",
+										"width" => "150px",
+										"edit" => Array("type" => "ValidationTextBox")
+									),
+									Array(
+										"caption" => "Single Click Enabled",
+										"name" => "SingleClickEnabled",
+										"width" => "100px",
+										"edit" => Array("type" => "CheckBox"),
+										"add" => false
+									),
+									Array(
+										"caption" => "Single Click Action",
+										"name" => "SingleClickAction",
+										"width" => "250px",
+										"edit" => Array(
+													"type" => "Select",
+													"options" => $this->SceneActions
+												),
+										"add" => "Toggle"
+									),
+									Array(
+										"caption" => "Single Click Action Parameter",
+										"name" => "SingleClickActionParameter",
+										"width" => "auto",
+										"edit" => Array("type" => "NumberSpinner"),
+										"add" => 0
+									)
+								),
+								"values" => Array(
+									Array(
+										"Button" => "1",
+										"SingleClickEnabled" => false,
+										"SingleClickAction" => "Toggle",
+										"SingleClickActionParameter" => 0
+									),
+									Array(
+										"Button" => "2",
+										"SingleClickEnabled" => false,
+										"SingleClickAction" => "Toggle",
+										"SingleClickActionParameter" => 0
+									),
+									Array(
+										"Button" => "3",
+										"SingleClickEnabled" => false,
+										"SingleClickAction" => "Toggle",
+										"SingleClickActionParameter" => 0
+									),
+									Array(
+										"Button" => "4",
+										"SingleClickEnabled" => false,
+										"SingleClickAction" => "Toggle",
+										"SingleClickActionParameter" => 0
+									),
+									Array(
+										"Button" => "5",
+										"SingleClickEnabled" => false,
+										"SingleClickAction" => "Toggle",
+										"SingleClickActionParameter" => 0
+									),
+									Array(
+										"Button" => "6",
+										"SingleClickEnabled" => false,
+										"SingleClickAction" => "Toggle",
+										"SingleClickActionParameter" => 0
+									),
+									Array(
+										"Button" => "7",
+										"SingleClickEnabled" => false,
+										"SingleClickAction" => "Toggle",
+										"SingleClickActionParameter" => 0
+									),
+									Array(
+										"Button" => "8",
+										"SingleClickEnabled" => false,
+										"SingleClickAction" => "Toggle",
+										"SingleClickActionParameter" => 0
+									)
+								)
+							);
 
 		// Return the completed form
 		return json_encode($form);
