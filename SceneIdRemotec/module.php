@@ -147,6 +147,13 @@ class SceneIdRemotec extends IPSModule {
 										"add" => "Toggle"
 									),
 									Array(
+										"caption" => "Single Click Action Variable",
+										"name" => "SingleClickActionVariable",
+										"width" => "auto",
+										"edit" => Array("type" => "SelectVariable"),
+										"add" => 0
+									),
+									Array(
 										"caption" => "Single Click Action Parameter",
 										"name" => "SingleClickActionParameter",
 										"width" => "auto",
@@ -171,6 +178,13 @@ class SceneIdRemotec extends IPSModule {
 										"add" => "Toggle"
 									),
 									Array(
+										"caption" => "Double Click Action Variable",
+										"name" => "DoubleClickActionVariable",
+										"width" => "auto",
+										"edit" => Array("type" => "SelectVariable"),
+										"add" => 0
+									),
+									Array(
 										"caption" => "Double Click Action Parameter",
 										"name" => "DoubleClickActionParameter",
 										"width" => "auto",
@@ -183,72 +197,88 @@ class SceneIdRemotec extends IPSModule {
 										"Button" => "1",
 										"SingleClickEnabled" => false,
 										"SingleClickAction" => "Toggle",
+										"SingleClickActionVariable" => 0,
 										"SingleClickActionParameter" => 0,
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
+										"DoubleClickActionVariable" => 0,
 										"DoubleClickActionParameter" => 0
 									),
 									Array(
 										"Button" => "2",
 										"SingleClickEnabled" => false,
 										"SingleClickAction" => "Toggle",
+										"SingleClickActionVariable" => 0,
 										"SingleClickActionParameter" => 0,
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
+										"DoubleClickActionVariable" => 0,
 										"DoubleClickActionParameter" => 0
 									),
 									Array(
 										"Button" => "3",
 										"SingleClickEnabled" => false,
 										"SingleClickAction" => "Toggle",
+										"SingleClickActionVariable" => 0,
 										"SingleClickActionParameter" => 0,
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
+										"DoubleClickActionVariable" => 0,
 										"DoubleClickActionParameter" => 0
 									),
 									Array(
 										"Button" => "4",
 										"SingleClickEnabled" => false,
 										"SingleClickAction" => "Toggle",
+										"SingleClickActionVariable" => 0,
 										"SingleClickActionParameter" => 0,
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
+										"DoubleClickActionVariable" => 0,
 										"DoubleClickActionParameter" => 0
 									),
 									Array(
 										"Button" => "5",
 										"SingleClickEnabled" => false,
 										"SingleClickAction" => "Toggle",
+										"SingleClickActionVariable" => 0,
 										"SingleClickActionParameter" => 0,
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
+										"DoubleClickActionVariable" => 0,
 										"DoubleClickActionParameter" => 0
 									),
 									Array(
 										"Button" => "6",
 										"SingleClickEnabled" => false,
 										"SingleClickAction" => "Toggle",
+										"SingleClickActionVariable" => 0,
 										"SingleClickActionParameter" => 0,
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
+										"DoubleClickActionVariable" => 0,
 										"DoubleClickActionParameter" => 0
 									),
 									Array(
 										"Button" => "7",
 										"SingleClickEnabled" => false,
 										"SingleClickAction" => "Toggle",
+										"SingleClickActionVariable" => 0,
 										"SingleClickActionParameter" => 0,
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
+										"DoubleClickActionVariable" => 0,
 										"DoubleClickActionParameter" => 0
 									),
 									Array(
 										"Button" => "8",
 										"SingleClickEnabled" => false,
 										"SingleClickAction" => "Toggle",
+										"SingleClickActionVariable" => 0,
 										"SingleClickActionParameter" => 0,
 										"DoubleClickEnabled" => false,
 										"DoubleClickAction" => "Toggle",
+										"DoubleClickActionVariable" => 0,
 										"DoubleClickActionParameter" => 0
 									)
 								)
