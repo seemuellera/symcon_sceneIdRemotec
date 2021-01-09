@@ -615,7 +615,7 @@ class SceneIdRemotec extends IPSModule {
 	
 	protected function DimDeviceToggle($targetId, $value) {
 		
-		if (GetValue($targetId) != 0) {
+		if (GetValue($targetId) == 0) {
 		
 			RequestAction($targetId, $value);
 		}
